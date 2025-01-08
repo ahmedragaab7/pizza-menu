@@ -97,7 +97,7 @@ body {
 
 .pizza {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 3.2rem;
 }
 
