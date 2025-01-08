@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; /* 10px = 1rem */
 }
 
 body {
@@ -22,15 +22,13 @@ body {
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 80rem; /* 800px */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4.8rem;
 }
-
-/* *************** */
 
 .header {
   align-self: stretch;
@@ -40,17 +38,15 @@ body {
   color: #edc84b;
   text-transform: uppercase;
   text-align: center;
-  font-size: 5.2rem;
+  font-size: 5.2rem; /* 52px */
   font-weight: 300;
   letter-spacing: 3px;
   position: relative;
   width: 100%;
-  display: block;
 }
 
 .header h1::before,
 .header h1::after {
-  display: block;
   content: "";
   height: 3px;
   width: 4rem;
@@ -67,8 +63,6 @@ body {
   right: 0;
 }
 
-/* *************** */
-
 .menu {
   display: flex;
   flex-direction: column;
@@ -81,14 +75,14 @@ body {
   padding: 1rem 0;
   border-top: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
-  font-size: 2.4rem;
+  font-size: 2.4rem; /* 24px */
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
 }
 
 .menu > p {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* 15px */
   text-align: center;
   line-height: 1.6;
   width: 80%;
@@ -97,23 +91,21 @@ body {
 .pizzas {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 4.8rem;
 }
 
 .pizza {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
-  text-align: center;
+  gap: 3.2rem;
 }
 
 .pizza img {
   width: 100%;
-  max-width: 20rem;
+  max-width: 12rem;
   aspect-ratio: 1;
-  border-radius: 1rem;
+  align-self: start;
 }
 
 .pizza div {
@@ -124,12 +116,12 @@ body {
 }
 
 .pizza h3 {
-  font-size: 2rem;
+  font-size: 2rem; /* 20px */
   font-weight: 400;
 }
 
 .pizza p {
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* 14px */
   font-weight: 300;
   font-style: italic;
   margin-bottom: auto;
@@ -137,36 +129,19 @@ body {
 
 .pizza span {
   display: block;
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* 16px */
 }
 
 .pizza.sold-out {
   color: #888;
-}
-
-.pizza.sold-out img {
-  filter: grayscale();
-  opacity: 0.8;
-}
-
-/* *************** */
-
-.footer {
-  font-size: 1.4rem;
-}
-
-.order {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.4rem;
+  opacity: 0.5;
 }
 
 .btn {
   color: inherit;
   font-family: inherit;
   border: none;
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* 14px */
   font-weight: 500;
   background-color: #edc84b;
   padding: 1.4rem 3.2rem;
@@ -178,67 +153,27 @@ body {
   background-color: #e9bb24;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-  html {
-    font-size: 50%;
-  }
-
-  .container {
-    padding: 2rem;
-  }
-
   .header h1 {
-    font-size: 4rem;
+    font-size: 4rem; /* 40px */
+  }
+
+  .menu > p,
+  .menu h2 {
+    text-align: center;
   }
 
   .pizzas {
     grid-template-columns: 1fr;
   }
-
-  .pizza {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .pizza img {
-    width: 100%;
-    max-width: 20rem;
-  }
-
-  .menu > p {
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: 45%;
-  }
-
   .header h1 {
-    font-size: 3.2rem;
-  }
-
-  .menu h2 {
-    font-size: 2rem;
-  }
-
-  .pizza h3 {
-    font-size: 1.8rem;
-  }
-
-  .pizza p {
-    font-size: 1.2rem;
-  }
-
-  .pizza span {
-    font-size: 1.4rem;
+    font-size: 3rem; /* 30px */
   }
 
   .btn {
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 1rem 2.4rem;
   }
 }
